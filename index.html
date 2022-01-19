@@ -54,7 +54,15 @@
         });
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
-        });
+        },
+            {
+            context: {
+                page: {
+                    url: null
+                }
+            }
+        }
+                       );
       }
 </script>
    
