@@ -67,10 +67,9 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         }
-        analytics.track("User Registered", {
-               Phone: phone,
-                Name: fullname,
-                 Email: email
+        analytics.track("User Registered",phone, function() {
+                        window.location.href = "";
+
 });
           );
       }
