@@ -67,6 +67,9 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
+          analytics.identify('', {
+            email: email
+        });
         analytics.track('User Registered' {
                      email_id: email
 });
