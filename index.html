@@ -53,6 +53,7 @@
         var fullname = form["fullname"].value;
         var destination = form["destination"].value;
         var details = form["details"].value;
+        var phone = form["phone"].value;
         var user = {
             email: email, 
             name: fullname, 
@@ -66,6 +67,11 @@
         analytics.track('destination submitted', user, function() {
             window.location.href = "";
         }
+        analytics.track("User Registered", {
+               Phone: phone,
+                Name: fullname,
+                 Email: email
+});
           );
       }
 </script>
