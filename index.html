@@ -14,6 +14,7 @@
 
 </head> 
 <body> 
+    
 <h1>What is your favorite place to travel?</h1> 
 <p>I am building a directory of the sweetest travel destinations.</p>  
 <form name="travel" onsubmit="identify(event)">
@@ -30,10 +31,10 @@
     Email: <input name="email" required="" size="75" type="email"/> 
     <br><br>
     <input name="submit" type="submit" value="submit"/>
-    </form>
-
+</form> 
     <!--Placeholder for identify and track script -->
-    <script type="text/javascript">
+    
+<script type="text/javascript">
       function identify(e){
         e.preventDefault();
         var form = e.target;
@@ -45,17 +46,15 @@
             email: email, 
             name: fullname, 
             destination: destination, 
-            details: details,
-            phone: phone
+            details: details
         };
         analytics.identify('1234', {
             email: email, 
             name: fullname
         });
-      analytics.track('destination submitted', user, function() {
+        analytics.track('destination submitted', user, function() {
             window.location.href = "";
         });
-          
       }
 </script>
    
