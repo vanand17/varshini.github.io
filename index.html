@@ -11,7 +11,7 @@
  // analytics.page();
   if (window.optimizelyEffectiveReferrer) var referrer = window.optimizelyEffectiveReferrer;
 
-   If they did, override the document.referrer
+ //  If they did, override the document.referrer
   referrer ? analytics.page({ referrer: referrer }) : analytics.page();
   /* MODIFIED SECTION */
   }}();
