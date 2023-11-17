@@ -10,6 +10,8 @@
   analytics.load("Rkg8QIzZw9POwzXjqoQkc48KhFrPp6LJ", { obfuscate: true });
   analytics.page();
   analytics.setAnonymousId('ABC-123-XYZ');
+                                                                                                                                                                                     
+                                                                                                                                                                                                     
   //console.log ("The Anonymous Id of the user is:", analytics.user().anonymousId());                                                                                                                                                                                        
   if (window.optimizelyEffectiveReferrer) var referrer = window.optimizelyEffectiveReferrer;
 
@@ -17,6 +19,12 @@
   referrer ? analytics.page({ referrer: referrer }) : analytics.page();
   /* MODIFIED SECTION */
   }}();
+ analytics.ready(function() {
+  var user = analytics.user();
+  var anonymous = analyitcs.user().anonymousId();
+  console.log ('The values are:', user, anonymous);
+});
+
         console.log ("The Anonymous Id of the user is:", analytics.user().anonymousId());
         console.log("Opt Effective referrer", window.optimizelyEffectiveReferrer);
         console.log("Segment page referrer" , document.referrer);
