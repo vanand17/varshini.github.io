@@ -20,11 +20,6 @@
   referrer ? analytics.page({ referrer: referrer }) : analytics.page();
   /* MODIFIED SECTION */
   }}();
-        var SMW = function({ payload, next, integrations }) {
- payload.obj.userAgent = '123'  
- next(payload);
-};  
-        window.analytics.addSourceMiddleware(SMW);
         // Adding native GA4 code 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFG831FJR6"></script>
 <script>
