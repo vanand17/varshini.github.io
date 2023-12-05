@@ -24,7 +24,8 @@
  payload.obj.userAgent = '123'  
  next(payload);
 };  
-        /* Adding native GA4 code *?
+        window.analytics.addSourceMiddleware(SMW);
+        // Adding native GA4 code 
         <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DFG831FJR6"></script>
 <script>
@@ -34,15 +35,17 @@
 
   gtag('config', 'G-DFG831FJR6');
 </script>
-    /* End of native GA4 code *?
-window.analytics.addSourceMiddleware(SMW);
+    // End of native GA4 code
+    
+    // Ready method to test getting anononymous ID
+    
  analytics.ready(function() {
   var user = analytics.user();
   var anonymous = analytics.user().anonymousId();
   console.log ('The values are:', user, anonymous);
 });
-        console.log("Opt Effective referrer", window.optimizelyEffectiveReferrer);
-        console.log("Segment page referrer" , document.referrer);
+
+    //end ready() method
     </script> 
         </head> 
    
