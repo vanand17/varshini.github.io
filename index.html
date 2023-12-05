@@ -24,6 +24,17 @@
  payload.obj.userAgent = '123'  
  next(payload);
 };  
+        /* Adding native GA4 code *?
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DFG831FJR6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DFG831FJR6');
+</script>
+    /* End of native GA4 code *?
 window.analytics.addSourceMiddleware(SMW);
  analytics.ready(function() {
   var user = analytics.user();
